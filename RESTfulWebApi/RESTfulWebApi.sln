@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTfulWebApp", "RESTfulWebApi\RESTfulWebApp.csproj", "{DCC915C1-0E24-49E8-A767-4F29A892F8A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendWebApi", "BackendWebApi\BackendWebApi.csproj", "{12EF68A1-AF37-4E09-BDEC-9AA6371B0961}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Entities", "Entities\Entities.shproj", "{1EB8AB43-EDC6-488A-BB4C-BC056C62661A}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Entities\Entities.projitems*{dcc915c1-0e24-49e8-a767-4f29a892f8a2}*SharedItemsImports = 4
+		Entities\Entities.projitems*{12ef68a1-af37-4e09-bdec-9aa6371b0961}*SharedItemsImports = 4
+		Entities\Entities.projitems*{1eb8ab43-edc6-488a-bb4c-bc056c62661a}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCC915C1-0E24-49E8-A767-4F29A892F8A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCC915C1-0E24-49E8-A767-4F29A892F8A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCC915C1-0E24-49E8-A767-4F29A892F8A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCC915C1-0E24-49E8-A767-4F29A892F8A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12EF68A1-AF37-4E09-BDEC-9AA6371B0961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12EF68A1-AF37-4E09-BDEC-9AA6371B0961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12EF68A1-AF37-4E09-BDEC-9AA6371B0961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12EF68A1-AF37-4E09-BDEC-9AA6371B0961}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
