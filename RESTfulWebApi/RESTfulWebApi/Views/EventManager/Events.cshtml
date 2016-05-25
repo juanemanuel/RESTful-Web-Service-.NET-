@@ -1,0 +1,54 @@
+﻿@using RESTfulWebApi.Models
+
+@{
+    ViewBag.Title = "Events";
+    Layout = "~/Shared/_layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                @if ((bool)ViewBag.HasEvents)
+                {
+                    foreach (EventModel evt in ViewBag.Events)
+                    {
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <div class="caption">
+                                    <h4 class="pull-right">
+                                        Início:
+                                        @if (evt.StartingDate.HasValue)
+                                        {
+                                            @evt.StartingDate.Value.ToShortDateString()
+                                        }
+                                        else
+                                        {
+                                            <text>Sem Data de Início</text>
+                                        }
+                                    </h4>
+
+
+                                    <h4>
+                                        @Html.ActionLink(evt.Name, "Info", new { id = evt.Id })
+                                    </h4>
+                                    <p>@evt.Description</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <text>Nenhum Evento Cadastrado</text>
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-5">
+                <a href="~/EventManager/Events/Create" class="btn btn-primary">Criar Evento</a>
+            </div>
+        </div>
+    </div>
+</div>
+

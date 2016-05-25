@@ -1,0 +1,81 @@
+﻿@model RESTfulWebApi.Models.EventModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Shared/_layout.cshtml";
+}
+@if (Model.IsCreation)
+{
+    <h2>Criar Novo Evento</h2>
+}
+else
+{
+    <h2>Editar Evento "@Model.Name"</h2>
+}
+
+@using (Html.BeginForm("Event/SaveEvent", "EventManager", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", required = "true" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StartingDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.StartingDate, new { htmlAttributes = new { @class = "form-control", required = "true" } })
+                @Html.ValidationMessageFor(model => model.StartingDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EndingDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.EndingDate, new { htmlAttributes = new { @class = "form-control", required = "true" } })
+                @Html.ValidationMessageFor(model => model.EndingDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.TextAreaFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", required = "true" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Creator, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.Creator, new { htmlAttributes = new { @class = "form-control", required = "true" } })
+                @Html.ValidationMessageFor(model => model.Creator, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @if (Model.IsCreation)
+    {
+        @Html.ActionLink("Voltar", "Events", null , new { @class = "btn btn-primary" })
+    }
+    else
+    {
+        @Html.ActionLink("Voltar", "Info", new { id = Model.Id }, new { @class = "btn btn-primary" })
+    }
+</div>

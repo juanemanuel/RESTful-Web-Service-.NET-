@@ -1,0 +1,57 @@
+﻿@using RESTfulWebApi.Models
+
+@{
+    ViewBag.Title = "Event";
+    Layout = "~/Shared/_layout.cshtml";
+}
+
+@{ 
+    var evt = (EventModel)ViewBag.Event;
+}
+
+<div class="col-md-4 col-md-offset-4">
+    <div class="thumbnail">
+        <div class="caption-full">
+            <h4 class="pull-left">
+                Início:
+                @if (evt.StartingDate.HasValue)
+                {
+                    @evt.StartingDate.Value.ToShortDateString()
+                }
+                else
+                {
+                    <text>Sem Data de Início </text>
+                }
+            </h4>
+
+            <h4 class="pull-right">
+                Fim:
+                @if (evt.EndingDate.HasValue)
+                {
+                    @evt.EndingDate.Value.ToShortDateString()
+                }
+                else
+                {
+                    <text>Sem Data de Fim</text>
+                }
+            </h4>
+            <br />
+            <h3>
+                <a href="">@evt.Name</a>
+            </h3>
+            <p>@evt.Description</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    @Html.ActionLink("Voltar", "Events", new { id = "" }, new { @class = "pull-left btn icon-btn btn-primary" })
+                </div>
+                <div class="col-md-4">
+                    @Html.ActionLink("Editar", "Edit", new { id = evt.Id }, new { @class = "btn icon-btn btn-success" })
+                    @Html.ActionLink("Apagar", "DeleteEvent", new { id = evt.Id }, new { @class = "btn icon-btn btn-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
