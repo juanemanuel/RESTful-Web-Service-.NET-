@@ -9,6 +9,10 @@ namespace BackendWebApi.Contexts
 {
     public class EventContext : DbContext
     {
+        public EventContext()
+        {
+            this.Database.CommandTimeout = 120;
+        }
         public DbSet<Event> Events { get; set; }
     }
 }

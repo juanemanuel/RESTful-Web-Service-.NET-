@@ -63,7 +63,6 @@ namespace RESTfulWebApi.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult SaveEvent(EventModel model)
         {
             var evtDTO = ConvertToEventDTO(model);
@@ -83,7 +82,7 @@ namespace RESTfulWebApi.Controllers
             newModel = ConvertToEventModel(result);
             newModel.IsCreation = false;
 
-            return RedirectToAction("Edit", newModel.Id);
+            return RedirectToAction("Edit", new { id = newModel.Id });
         }
 
         private IEnumerable<EventModel> GetEvents()

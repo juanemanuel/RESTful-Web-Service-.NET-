@@ -121,11 +121,28 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\gerenciadordeeventosSD - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\gerenciadordeeventosSD - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jQuery-Interface\images\ui-icons_444444_256x240.png" />
+    <Content Include="Scripts\jQuery-Interface\images\ui-icons_555555_256x240.png" />
+    <Content Include="Scripts\jQuery-Interface\images\ui-icons_777620_256x240.png" />
+    <Content Include="Scripts\jQuery-Interface\images\ui-icons_777777_256x240.png" />
+    <Content Include="Scripts\jQuery-Interface\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Scripts\jQuery-Interface\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jQuery-Interface\index.html" />
+    <Content Include="Scripts\jQuery-Interface\jquery-ui.css" />
+    <Content Include="Scripts\jQuery-Interface\jquery-ui.js" />
+    <Content Include="Scripts\jQuery-Interface\jquery-ui.min.css" />
+    <Content Include="Scripts\jQuery-Interface\jquery-ui.min.js" />
+    <Content Include="Scripts\jQuery-Interface\jquery-ui.structure.css" />
+    <Content Include="Scripts\jQuery-Interface\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\jQuery-Interface\jquery-ui.theme.css" />
+    <Content Include="Scripts\jQuery-Interface\jquery-ui.theme.min.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
